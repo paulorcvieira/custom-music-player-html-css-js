@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Music Player</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap"/>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="music-player">
+    <button id="playlist" title="Playlist">
+      <i class="fa-solid fa-angle-down"></i>
+    </button>
+    <img src="./assets/images/racionais-mcs-vida-loka-parte-2.jpeg" alt="Cover" id="song-image">
+    <div class="song-details">
+      <p id="song-name">Vida Loka Parte 2</p>
+      <p id="song-artist">Racionais MC's</p>
+    </div>
+    <div class="player-options">
+      <button id="shuffle" title="Shuffle">
+        <i class="fa-solid fa-shuffle"></i>
+      </button>
+      <button id="prev" title="Previous">
+        <i class="fa-solid fa-backward-step"></i>
+      </button>
+      <button id="play" title="Play">
+        <i class="fa-solid fa-play"></i>
+      </button>
+      <button id="pause" class="hide" title="Pause">
+        <i class="fa-solid fa-pause"></i>
+      </button>
+      <button id="next" title="Next">
+        <i class="fa-solid fa-forward-step"></i>
+      </button>
+      <button id="repeat" title="Repeat">
+        <i class="fa-solid fa-repeat"></i>
+      </button>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+    <div id="progress-bar">
+      <div id="current-progress"></div>
+    </div>
+    <div class="time-container">
+      <span id="current-time">0:00</span>
+      <span id="max-duration">0:00</span>
+    </div>
+    <div id="playlist-container" class="hide">
+      <button id="close-button" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2 id="playlist-title">My Musics</h2>
+      <ul id="playlist-songs"></ul>
+    </div>
+  </div>
+</body>
+<!-- script -->
+<script src="./assets/js/script.js"></script>
+</html>
